@@ -1,0 +1,15 @@
+<html>
+
+<script>
+
+let guess = prompt("What is your number?");
+if (guess == "% 2 = 0") {
+  alert("Your number is even.");
+}
+if (guess !== "% 2 = 0") {
+  alert ("Your number is odd.");
+}
+
+</script>
+
+</html>

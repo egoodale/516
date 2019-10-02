@@ -1,0 +1,105 @@
+<html>
+
+<script>
+let thing = "#"
+while(thing.length<8) {
+  console.log(thing)
+  thing += "#"
+}
+  
+</script>
+
+<script>
+
+let number = 1;
+while (number < 101) {
+  
+  if (number % 15 == 0) {
+    var x = "FizzBuzz";
+    console.log(x)
+  } else if (number % 5 == 0) {
+    var x = "Buzz";
+    console.log(x)
+  } else if (number % 3 == 0) {
+    var x = "Fizz";
+    console.log(x)
+  } else
+    console.log(number);
+  
+  number = number + 1;
+}
+  
+
+</script>
+
+<script>
+
+let even = " # # # #"
+let odd = "# # # # "
+let counter = 0
+while (counter < 9) {
+  if (counter % 2 !== 0) {
+  console.log(odd);
+  }
+  else if (counter % 2 == 0) {
+  console.log(even);
+  }
+  counter = counter + 1
+}
+
+</script>
+
+<script>
+
+let counter = 0
+let ocounter = 0
+let x = "#"
+while (ocounter < 8) {
+  while (counter < 8) {
+    x +=  "#";
+    counter++;
+  }
+  console.log(x);
+  ocounter++ ;
+  }
+
+
+</script>
+
+
+<script>
+
+let j = 1;
+
+let output = "";
+
+while (j <= 8) {
+  let i = 1;
+  while (i <= 8) {
+    if ((i % 2 == 0) ^ (j % 2 == 0)) {
+      output = output + "#";
+    } else {
+	  output = output + " ";
+    }
+    i = i + 1;
+  }
+  output = output + "\n";
+  i = 1;
+  j = j + 1;
+}
+
+</script>
+
+
+<script>
+
+let number = 0;
+while (number < 10) {
+  number = number + 0.001;
+  console.log(number);
+}
+
+</script>
+
+
+</html>

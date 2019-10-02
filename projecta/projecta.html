@@ -1,0 +1,27 @@
+<script>
+
+let guess = prompt("Is your number 50?");
+let currentNumber = 50;
+let lowerbound = 1
+let upperbound = 100
+
+while (guess !== "yes") {
+  if (guess == "<") {
+  upperbound = currentNumber;
+  currentNumber = Math.floor((lowerbound + upperbound)/2);
+  
+  guess = prompt("Is your number" + (currentNumber) + "?");
+  }
+   
+  if (guess == ">") {
+  lowerbound = currentNumber;
+  currentNumber = Math.floor((lowerbound + upperbound)/2);
+  
+  guess = prompt("Is your number" + (currentNumber) + "?");
+  }
+
+}
+
+alert("Excellent, I won!");
+
+</script>
