@@ -1,0 +1,50 @@
+<html>
+
+<script>
+
+let cipher = prompt("Enter shift");
+  if (cipher >= 0) {
+    cipher = cipher%26;
+  }
+  else {
+    cipher = (cipher%26) + 26;
+  }
+
+
+let message = prompt ("Enter text");
+
+let codedMess = "";
+alert(CaesarCipher(message, cipher));
+
+
+
+
+
+function CaesarCipher(message, cipher) {
+  
+  for (i = 0; i < message.length; i++){
+    let curChar = message.charCodeAt(i);
+	if (curChar >= 65 && curChar <= 90) {
+	  curChar = (curChar + cipher - 65)%26 + 65;
+	  }
+	else if (curChar >= 97 && curChar <= 122) {
+      curChar = (curChar + cipher - 97)%26 + 97; 
+	   }
+	    
+	else {
+	  
+	    }
+		codedMess += String.fromCharCode(curChar);
+	  }
+	  return codedMess;
+	  }
+ 
+
+
+
+
+</script>
+
+</html>
+
+
