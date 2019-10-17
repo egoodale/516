@@ -10,14 +10,10 @@ let cipher = prompt("Enter shift");
     cipher = (cipher%26) + 26;
   }
 
-
 let message = prompt ("Enter text");
 
 let codedMess = "";
 alert(CaesarCipher(message, cipher));
-
-
-
 
 
 function CaesarCipher(message, cipher) {
@@ -35,13 +31,9 @@ function CaesarCipher(message, cipher) {
 	  
 	    }
 		codedMess += String.fromCharCode(curChar);
-	  }
-	  return codedMess;
-	  }
- 
-
-
-
+  }
+return codedMess;
+}
 
 </script>
 
