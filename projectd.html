@@ -1,0 +1,13 @@
+<html>
+
+<script>
+
+let message = prompt("Enter your text.");
+let conlang = message.replace(/(([aeiouyAEIOUY][^aeiou]|[aeiouyAEIOUY][^aeiou ]{2,})e\b)/g, "$2_");
+conlang = conlang.replace(/([aeiouyAEIOUY]+)/g, "aig$1");
+conlang = conlang.replace(/(_\b)/g, "e");
+alert(conlang);
+
+</script>
+
+</html>
