@@ -1,0 +1,19 @@
+Why this project?
+-Learning to create this interface allows us to conduct our research on intelligibility. 
+
+--Alif’s section--
+What: Alif will develop a program that plays a sound file
+Why: This will allow a user to listen to the sentence
+How: First, Alif will store the sound file in his computer. Then he will make the sound icon “clickable.” Then the sound will play.
+
+--Erik’s section--
+What:  Erik will code a program for collecting and storing participants’ inputs.
+Why:  Collecting and storing these inputs is necessary for them to be accessed later for analysis.
+How:  The course has covered topics such as receiving and logging text.  Erik will need to learn how to move that data to servers and pull data from those servers at a later time.  
+He will utilize online resources, the course instructor, and/or TAs.
+
+--Agata’s section--
+What: Agata will work on the website design
+Why: This will create appealing appearance and hopefully it will facilitate a user-friendly interface. 
+How: This task is beyond the scope of the class so Agata will educate herself and, if needed, seek help from Alif, the instructor of the course and the TAs. 
+Here is a screenshot of one idea of the intended design (please note that this design may change, this is just an example)
