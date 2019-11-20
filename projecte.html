@@ -46,7 +46,7 @@ function process() {
   for (let i = 0; i < types.length; i++){
     for (let j = 0; j < tokens.length; j++){
 	  if (types[i] == tokens[j]){
-	  console.log(true);
+	    console.log(true);
 	    count++;	    
 	  }
     }
@@ -60,8 +60,8 @@ function process() {
   let sortedFreq = Object.keys(freq).sort(function(a,b){return freq[b]-freq[a]});
   let fd = "";
   for (let k = 0; k < sortedFreq.length; k++){
-  fd += sortedFreq[k] + " " + freq[sortedFreq[k]] + "\n";
-  fp = fd + "Type/Token Ratio:  " + ratio;
+    fd += sortedFreq[k] + " " + freq[sortedFreq[k]] + "\n";
+    fp = fd + "Type/Token Ratio:  " + ratio;
   }
 
   // populate the output text box with the value of the variable "y"
