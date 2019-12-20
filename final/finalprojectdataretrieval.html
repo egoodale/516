@@ -1,0 +1,102 @@
+<html>
+<head>
+  <title>Firebase enter data</title>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+<!--Enter Firebase project code here. -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCXltz8mXtBVU3os5FHOKDWBXsu4UNkGhc",
+    authDomain: "intelligibility-live.firebaseapp.com",
+    databaseURL: "https://intelligibility-live.firebaseio.com",
+    projectId: "intelligibility-live",
+    storageBucket: "intelligibility-live.appspot.com",
+    messagingSenderId: "462422553078",
+    appId: "1:462422553078:web:c4feef40459059338017d7",
+    measurementId: "G-TC1VWK9P99"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<script type="text/javascript">
+
+
+
+//var text = "";
+//var database = firebase.database();
+  //let userid = prompt("Enter ID number");
+  //for (question = 1; question < 3; question++){
+    //questionid = prompt("Question Number? Please enter 1 or 2.");
+    //for (trial = 1; trial < 4; trial++){
+	  //text = prompt("Enter your text for trial #" + trial);
+	  //StoreData(userid, questionid, trial, text);
+    //}
+  //}
+//function StoreData(userid, questionid, trialid, text){
+	//database.ref('u' + userid + '/q' + questionid + '/t' + trialid).set({
+		//text: text
+	//});
+//}
+
+//u15/q3/t1 
+
+
+var database = firebase.database();
+let retrieve = prompt("Would you like to see your text?");
+  if (retrieve == "yes") {
+    let retrieveid = prompt("Enter ID number");
+	var ref = database.ref('u'+retrieveid);
+	ref.on('value', function(mydata){
+	  let retrieveq = prompt("Enter question number 1 or 2.");
+	  if (retrieveq == "1") {
+		var result1 = "Text one for question one: " + mydata.val().q1.t1.text; //use this to get the text of a certain qustion. For example, for the second text of the first questions, you can use mydata.val().q1.t2.text.
+		var result2 = "Text two for question one: " + mydata.val().q1.t2.text;
+		var result3 = "Text three for question one: " + mydata.val().q1.t3.text;
+		alert(result1);
+		alert(result2);
+		alert(result3);
+	  }
+	  if (retrieveq == "2") {
+		var result1 = "Text one for question two: " + mydata.val().q2.t1.text;
+		var result2 = "Text two for question two: " + mydata.val().q2.t2.text;
+		var result3 = "Text three for question two: " + mydata.val().q2.t3.text;
+		alert(result1);
+		alert(result2);
+		alert(result3);
+	  }
+		
+	});
+  }
+  else{
+    alert("Okay, have a nice day.");
+  }
+ 
+
+</script>
+
+<script>
+
+<form action = "" method = "POST"></form>
+  <input type = "text" name = "transcription" placeholder = "enter transcription">
+  
+  <button type = "submit">Enter Text</button>
+  
+  
+<!--host on github.io  Check class pdf on setting up Github
+//Store data persistently through Firebase (firebase.google.com) -->
+
+</script>
+
+</html>
